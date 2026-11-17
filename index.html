@@ -239,6 +239,23 @@ button{font:inherit;color:inherit;cursor:pointer;background:none;border:none;pad
 .row{display:flex;flex-direction:column;gap:8px;padding:20px 24px;background:var(--gray);border-radius:30px;font:800 30px/1.1 var(--f-d)}
 .row .st{font:700 27px var(--f-b)}
 .close{position:absolute;right:28px;top:28px;font:800 36px var(--f-d);width:60px;height:60px;border-radius:50%;background:var(--lime)}
+/* 7 planes */
+.pre{position:absolute;left:1100px;top:168px;width:724px;background:var(--yel);border-radius:48px;padding:26px 36px 28px;display:flex;flex-direction:column;gap:8px}
+.pre .pl,.pre .pn2{font:500 20px var(--f-m);letter-spacing:.08em;text-transform:uppercase}
+.pre b{font:800 46px/1 var(--f-d);letter-spacing:-.04em}
+.pre .pt{font-size:27px;line-height:1.25}
+.pre .pn2{color:var(--mut);letter-spacing:.04em;text-transform:none;margin-top:4px}
+.pcol{position:absolute;top:418px;width:560px;display:flex;flex-direction:column;gap:16px}
+.ph2{display:flex;align-items:center;gap:16px;font:800 36px var(--f-d);letter-spacing:-.03em;margin-bottom:4px}
+.ph2 .pk{background:var(--ink);color:#fff;font:500 22px var(--f-m);letter-spacing:.08em;text-transform:uppercase;padding:13px 26px;border-radius:99px;white-space:nowrap}
+.plan{background:#fff;border-radius:44px;padding:22px 32px 24px;display:flex;flex-direction:column;gap:6px;height:182px}
+.plan.fr{background:var(--lime)}
+.plan .pn{font:700 30px/1.1 var(--f-d);letter-spacing:-.02em}
+.plan .pp{font:800 58px/.95 var(--f-d);letter-spacing:-.045em;display:flex;align-items:baseline;gap:10px}
+.plan .pp small{font:700 24px var(--f-b);letter-spacing:0;color:var(--mut)}
+.plan.fr .pp small{color:var(--ink)}
+.plan .pd{font-size:25px;line-height:1.2;color:var(--mut);white-space:nowrap}
+.plan.fr .pd{color:var(--ink)}
 /* 9 paso */
 .numc{position:absolute;border-radius:60px;padding:30px 40px 34px;width:540px;height:330px}
 .numc b{display:block;font:800 170px/.9 var(--f-d);letter-spacing:-.06em}
@@ -384,20 +401,25 @@ button{font:inherit;color:inherit;cursor:pointer;background:none;border:none;pad
   </div>
   
 </section>
-<section class="slide" data-label="Probalo" data-steps="0" data-who="María" data-t="2:30–4:30">
+<section class="slide" data-label="Planes" data-steps="0" data-who="María" data-t="2:30–4:30">
   <div class="panel p-g"></div>
-  <div class="tagp ">04 · Demo del MVP · sin internet</div><div class="brand"><svg aria-hidden="true"><use href="#logo"/></svg>Umbral</div>
-  <div class="mini-l rv" style="--d:100">
-    <h2>¿Qué necesitás saber antes de ir?</h2>
-    <div class="chips" id="chips"></div>
+  <div class="tagp ">04 · Modelo de negocio</div><div class="brand"><svg aria-hidden="true"><use href="#logo"/></svg>Umbral</div>
+  <h2 class="h2 ab rv" style="left:90px;top:160px;width:1100px;font-size:110px;--d:100">La información,<br><span class="hp">siempre gratis.</span></h2>
+  <div class="pre rv" style="--d:250"><span class="pl">Antes de lanzar</span><b>Dic. 2026 – feb. 2027</b><span class="pt">Validamos y relevamos los primeros 10 cafés.</span><span class="pn2">Precios hipotéticos · pesos de nov. 2026</span></div>
+  <div class="pcol rv" style="left:96px;--d:400">
+    <div class="ph2"><span class="pk">Meses 1–3</span>Piloto</div>
+    <div class="plan fr"><span class="pn">Personas</span><span class="pp">$0</span><span class="pd">Buscar y ver toda la información</span></div>
+    <div class="plan fr"><span class="pn">Cafés · ficha</span><span class="pp">$0</span><span class="pd">Su accesibilidad, con fuente y fecha</span></div>
   </div>
-  <div class="cbox rv" style="--d:200"><div class="count"><strong id="cnt">11</strong><span>cafés cumplen tus condiciones</span></div><p class="count-s" id="cnt2"><b>2</b> con información incompleta</p></div>
-  <div class="grid rv" id="grid" style="--d:200"></div>
-  <div class="legend"><span><b style="color:var(--ok)">●</b> Cumple todo lo que marcaste</span><span><b style="color:var(--un)">◌</b> Información incompleta</span><span><b>Tocá un café para ver su ficha</b></span></div>
-  <div class="detail" id="detail" role="dialog" aria-label="Ficha del café">
-    <button class="close" id="dclose" aria-label="Cerrar ficha">×</button>
-    <h3 id="dname"></h3><p>Las 6 condiciones, cada una con su estado.</p>
-    <div class="rows" id="drows"></div>
+  <div class="pcol rv" style="left:680px;--d:550">
+    <div class="ph2"><span class="pk">Desde el mes 4</span>Aprendizaje</div>
+    <div class="plan"><span class="pn">Cafés Pro</span><span class="pp">$35.000<small>/mes</small></span><span class="pd">Reservas por texto, promos y estadísticas</span></div>
+    <div class="plan"><span class="pn">Relevamiento</span><span class="pp">$250.000<small>por visita</small></span><span class="pd">Visita del equipo, informe con fotos</span></div>
+  </div>
+  <div class="pcol rv" style="left:1264px;--d:700">
+    <div class="ph2"><span class="pk">Desde el mes 7</span>Ampliación</div>
+    <div class="plan"><span class="pn">Premium personas</span><span class="pp">$5.000<small>/mes</small></span><span class="pd">Salidas en grupo e itinerarios</span></div>
+    <div class="plan"><span class="pn">Publicidad identificada</span><span class="pp">$40.000<small>/mes</small></span><span class="pd">“Patrocinado”, solo si cumple</span></div>
   </div>
   
 </section>
@@ -557,53 +579,7 @@ var idleT;
 function wake(){document.body.classList.remove('idle');clearTimeout(idleT);idleT=setTimeout(function(){document.body.classList.add('idle')},3500)}
 ['pointermove','keydown','pointerdown'].forEach(function(ev){window.addEventListener(ev,wake)});wake();
 
-/* slide 5: mini Umbral con datos reales del MVP */
-var K=['Ingreso sin escalones','Atención por escrito','Espacio tranquilo','Baño accesible','Música a volumen bajo','Carta en lectura fácil'];
-var DATA=[["Café Biblioteca Hojarasca","oooooo"],["Café Doña Alcaparra","oouunu"],["Café El Retoño Gris","oouunu"],["Café Faro Chico","oououu"],["Café La Calandria Lenta","nonnnu"],["Café Lupa Norte","oooouu"],["Café Mesa Larga","oououo"],["Café Nube de Pan","oooooo"],["Café Rincón Quieto","ooouoo"],["Café Taller del Sur","uouuuu"],["Casa Mirasol Café","oooouo"],["Cinco Lunas Café","nonnnu"],["Horno de Barrio Alto","uuuuuu"],["Tinta y Soda Café","oooouu"],["Tostadores del Pasaje Cobre","oooono"]];
-var sel={0:1,1:1}, chipsEl=$('#chips'), gridEl=$('#grid');
-K.forEach(function(name,i){
-  var b=document.createElement('button');b.className='chipb';b.id='chip'+i;b.setAttribute('aria-pressed',sel[i]?'true':'false');
-  b.innerHTML='<svg aria-hidden="true"><use href="#i-ok"/></svg>'+name;
-  b.onclick=function(){if(sel[i]){delete sel[i]}else{sel[i]=1}b.setAttribute('aria-pressed',sel[i]?'true':'false');calc()};
-  chipsEl.appendChild(b);
-});
-var tiles=DATA.map(function(c,idx){
-  var t=document.createElement('button');t.className='tile';t.setAttribute('aria-label',c[0]);
-  t.innerHTML='<span class="nm">'+c[0].replace('Café ','')+'</span><span class="stt"></span>';
-  t.onclick=function(){openDetail(idx)};gridEl.appendChild(t);return t;
-});
-var shown=11;
-function tween(el,from,to){
-  if(reduce||from===to){el.textContent=to;return}
-  var s=performance.now(),d=500;
-  (function f(n){var p=Math.min(1,(n-s)/d);el.textContent=Math.round(from+(to-from)*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)})(s);
-}
-function calc(){
-  var keys=Object.keys(sel).map(Number), ok=0, inc=0;
-  DATA.forEach(function(c,idx){
-    var st='ok';
-    keys.forEach(function(k){var v=c[1][k];if(v==='n')st='no';else if(v==='u'&&st!=='no')st='inc'});
-    var t=tiles[idx];t.className='tile '+(keys.length?st:'');
-    var lbl=$('.stt',t);
-    if(!keys.length){lbl.textContent='Sin filtros'}
-    else if(st==='ok'){ok++;lbl.textContent='Cumple'}
-    else if(st==='inc'){inc++;lbl.textContent='Incompleta'}
-    else{lbl.textContent='No cumple'}
-  });
-  if(!keys.length){ok=DATA.length;inc=0}
-  tween($('#cnt'),shown,ok);shown=ok;
-  $('#cnt2').innerHTML='<b>'+inc+'</b> con información incompleta';
-}
-function openDetail(idx){
-  var c=DATA[idx];$('#dname').textContent=c[0];var h='';
-  K.forEach(function(name,k){
-    var v=c[1][k],cls=v==='o'?'ok':v==='n'?'no':'un',ic=v==='o'?'i-ok':v==='n'?'i-no':'i-q',tx=v==='o'?'Confirmado':v==='n'?'No disponible':'Sin información';
-    h+='<div class="row">'+name+'<span class="st '+(v==='o'?'ok':v==='n'?'no':'un')+'">'+tx+'</span></div>';
-  });
-  $('#drows').innerHTML=h;$('#detail').classList.add('open');
-}
-function closeDetail(){$('#detail').classList.remove('open')}
-$('#dclose').onclick=closeDetail; calc();
+function closeDetail(){}
 
 /* slide 6 */
 var caps=['nunca un sí por defecto','equipo · comercio · visitantes','sin registro para buscar'];
